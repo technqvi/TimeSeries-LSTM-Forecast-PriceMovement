@@ -52,13 +52,13 @@
 * Ingest JSON file into FinAssetForecast.fin_movement_forecast table.
 * This script has been deployed as clound function on google cloud as this link [forecast-asset-movement](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/tree/main/forecast-asset-movement) and create job on cloud scheduler to trig clound function on daily basis.
 
-### [invoke_forecast_gcf](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/blob/main/invoke_forecast_gcf.ipynb)
+### [invoke_forecast_gcf.ipynb](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/blob/main/invoke_forecast_gcf.ipynb)
 #### Youtube : [3 Make Stock Multi Step Prediction Using LSTM Model#2](https://youtu.be/8DlACgKslSE?t=4265)
 * To make prediction multiple items , run this script to call cloud function api by specifying desired period.
 * To obtain authentication token as credential to call api correctly, you need to  install Google cloud-sdk and set defualt project first on enviroemnt variable(Window OS). [link](https://cloud.google.com/sdk/docs/install).
 
 
-### [visualize_forecast_ts](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/blob/main/visualize_forecast_result.ipynb)
+### [visualize_forecast_result.ipynb](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/blob/main/visualize_forecast_result.ipynb)
 #### YouTube: [4 Visualize Stock Price Prediction Result on JupyterLab](https://www.youtube.com/watch?v=jiOr3AIMWO4&)
 * Specify start-date and end-date to plot prediction result
 * Get model configuration from FinAssetForecast.model_ts_metadata table by the model id.
