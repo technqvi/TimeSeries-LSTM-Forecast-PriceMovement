@@ -87,11 +87,11 @@
 * [model](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/tree/main/model) :  Each sub folder stores model file and scaler object file, each is located on both local path and google cloud  storage.
 * [model_ts_metadata.csv](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/tree/main/model/model_ts_metadata.csv) : store model configuration metadata on google cloud storage but it allow you to query against external table on BigQuery.
 * [train_data](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/tree/main/train_data) : store train/test csv file loaded from Bigquery.
-* [train_model_collection](https://github.com/technqvi/TimeSeriesML-FinMarket/tree/main/forecast-asset%20-price-movement-LSTM-TimeSeries/train_model_collection) : All satisfactory models can be collected here.
-* [tuning](https://github.com/technqvi/TimeSeriesML-FinMarket/tree/main/forecast-asset%20-price-movement-LSTM-TimeSeries/tuning) : use Keras Tuner to find optimal hyperparamer and store tuning result here.
-* [csv_data](https://github.com/technqvi/TimeSeriesML-FinMarket/tree/main/forecast-asset%20-price-movement-LSTM-TimeSeries/csv_data) :To load data price exported from Amibrker to BQ, we will store this file here  .
-* [data-schema-bq](https://github.com/technqvi/TimeSeriesML-FinMarket/tree/main/forecast-asset%20-price-movement-LSTM-TimeSeries/data-schema-bq) : all table schema on Bigquery.
-* [command to deploy script to cloud function](https://github.com/technqvi/TimeSeriesML-FinMarket/blob/main/forecast-asset%20-price-movement-LSTM-TimeSeries/forecast-asset-deploy-function.txt)  
+* [train_model_collection](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/tree/main/train_model_collection) : All satisfactory models can be collected here.
+* [tuning](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/tree/main/tuning) : use Keras Tuner to find optimal hyperparamer and store tuning result here.
+* [csv_data](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/tree/main/csv_data) :To load data price exported from Amibrker to BQ, we will store this file here  .
+* [data-schema-bq](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/tree/main/data-schema-bq) : All table schema on Bigquery.
+* [command to deploy script to cloud function](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/tree/main/forecast-asset-deploy-function.txt)  
 
 ### [All Essential Packages  on Python 3.9](https://pypi.org/project)
 - tensorflow >=2.11
