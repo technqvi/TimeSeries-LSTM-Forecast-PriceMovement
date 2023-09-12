@@ -1,0 +1,78 @@
+model_forecast_performance
+
+partition : collection_timestamp as MONTH 
+cluster  :model_id,collection_date,metric_name
+
+[
+  {
+    "name": "collection_timestamp",
+    "mode": "NULLABLE",
+    "type": "TIMESTAMP",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "model_id",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "metric_value",
+    "mode": "NULLABLE",
+    "type": "FLOAT",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "pred_actual_data",
+    "mode": "REPEATED",
+    "type": "RECORD",
+    "description": null,
+    "fields": [
+      {
+        "name": "prediction_date",
+        "mode": "NULLABLE",
+        "type": "DATE",
+        "description": null,
+        "fields": []
+      },
+      {
+        "name": "actual_value",
+        "mode": "NULLABLE",
+        "type": "FLOAT",
+        "description": null,
+        "fields": []
+      },
+      {
+        "name": "pred_value",
+        "mode": "NULLABLE",
+        "type": "FLOAT",
+        "description": null,
+        "fields": []
+      },
+      {
+        "name": "date",
+        "mode": "NULLABLE",
+        "type": "DATE",
+        "description": null,
+        "fields": []
+      }
+    ]
+  },
+  {
+    "name": "metric_name",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "collection_date",
+    "mode": "NULLABLE",
+    "type": "DATE",
+    "description": null,
+    "fields": []
+  }
+]

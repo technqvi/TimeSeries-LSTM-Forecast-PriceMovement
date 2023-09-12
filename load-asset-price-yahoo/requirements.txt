@@ -1,0 +1,7 @@
+functions-framework==3.*
+db-dtypes
+pandas
+numpy
+google-cloud-bigquery
+ta
+yfinance

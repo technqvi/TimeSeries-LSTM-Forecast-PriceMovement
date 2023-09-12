@@ -1,0 +1,73 @@
+model_ts_metadata
+[
+  {
+    "name": "model_id",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "asset",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "prediction",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "input_sequence_length",
+    "mode": "NULLABLE",
+    "type": "INTEGER",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "output_sequence_length",
+    "mode": "NULLABLE",
+    "type": "INTEGER",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "gs_model_path",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "local_model_path",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "model_file",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "scaler_file",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "scaler_pred_file",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": null,
+    "fields": []
+  }
+]

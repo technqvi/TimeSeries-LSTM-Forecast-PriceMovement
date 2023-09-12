@@ -1,0 +1,64 @@
+pongthorn.FinAssetForecast
+fin_data
+
+partition : 
+cluster  : Date,Symbol
+
+[
+  {
+    "name": "Date",
+    "mode": "NULLABLE",
+    "type": "DATE",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "Symbol",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "Close",
+    "mode": "NULLABLE",
+    "type": "FLOAT",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "EMA1",
+    "mode": "NULLABLE",
+    "type": "FLOAT",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "EMA2",
+    "mode": "NULLABLE",
+    "type": "FLOAT",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "MACD",
+    "mode": "NULLABLE",
+    "type": "FLOAT",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "SIGNAL",
+    "mode": "NULLABLE",
+    "type": "FLOAT",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "ImportDateTime",
+    "mode": "NULLABLE",
+    "type": "DATETIME",
+    "description": null,
+    "fields": []
+  }
+]

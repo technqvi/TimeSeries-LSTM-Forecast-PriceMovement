@@ -1,0 +1,88 @@
+fin_movement_forecast
+asia-southeast1
+
+prediction_date
+model_id,asset_name,prediction_name
+
+
+[
+  {
+    "name": "prediction_result",
+    "mode": "REPEATED",
+    "type": "RECORD",
+    "description": null,
+    "fields": [
+      {
+        "name": "output_value",
+        "mode": "NULLABLE",
+        "type": "FLOAT",
+        "description": null,
+        "fields": []
+      },
+      {
+        "name": "output_date",
+        "mode": "NULLABLE",
+        "type": "DATE",
+        "description": null,
+        "fields": []
+      }
+    ]
+  },
+  {
+    "name": "prediction_date",
+    "mode": "NULLABLE",
+    "type": "DATE",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "feature_for_prediction",
+    "mode": "REPEATED",
+    "type": "RECORD",
+    "description": null,
+    "fields": [
+      {
+        "name": "input_feature",
+        "mode": "NULLABLE",
+        "type": "FLOAT",
+        "description": null,
+        "fields": []
+      },
+      {
+        "name": "input_date",
+        "mode": "NULLABLE",
+        "type": "DATE",
+        "description": null,
+        "fields": []
+      }
+    ]
+  },
+  {
+    "name": "pred_timestamp",
+    "mode": "NULLABLE",
+    "type": "TIMESTAMP",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "prediction_name",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "asset_name",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "model_id",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": null,
+    "fields": []
+  }
+]

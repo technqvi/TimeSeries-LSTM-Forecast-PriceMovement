@@ -1,0 +1,65 @@
+tranform to cloud-funtoin
+indent mehton
+uncomment return
+remove visualize
+
+functions-framework --target=load_asset_price_yahoo
+
+Check python version 3.9 or 3.10 , run test on jupyter lab firsts
+
+gcloud functions deploy load-asset-price-yahoo  --gen2  --region=asia-southeast1  --runtime=python39  --memory=1024 --source=.    --env-vars-file .env.yaml  --trigger-http   --entry-point  load_asset_price_yahoo --timeout 1200s
+
+
+gcloud functions deploy collect_performance_forecast_result  --gen2  --region=asia-southeast1  --runtime=python310  --memory=1024 --source=.      --trigger-http   --entry-point  collect_prediction_result --timeout 1200s
+
+gcloud functions deploy forecast-fin-asset-ts-movement  --gen2  --region=asia-southeast1  --runtime=python39  --memory=1024 --source=.  --env-vars-file .env.yaml  --trigger-http   --entry-point  forecast_asset_movement --timeout 1200s
+
+functions-framework --target=forecast_asset_movement
+
+curl -m 1210 -X POST https://forecast-fin-asset-ts-movement-qulerxpcqq-as.a.run.app \
+-H "Authorization: bearer $(gcloud auth print-identity-token)" \
+-H "Content-Type: application/json" \
+-d '{
+  "TODAY": "" ,
+  "MODEL_ID": "spy-ema1-60t10",
+}
+
+
+
+
+
+colud scheulder
+
+0 9 * * *
+IncodChian-Time
+https://forecast-fin-asset-ts-movement-qulerxpcqq-as.a.run.app/
+
+POST METHOD
+Content-Type  application/json
+User-Agent    Google-Cloud-Scheduler
+
+Body
+{
+  "TODAY": "" ,
+  "MODEL_ID": "spy-ema1-60t10",
+
+}
+
+
+
+
+
+authen
+OIDC Token
+computer engisn (defualt service accotunt)
+
+
+
+# how client call could function 
+https://medium.com/google-cloud/gcp-cloud-functions-develop-it-the-right-way-82e633b07756
+https://cloud.google.com/functions/docs/running/direct#functions-calling-direct-pubsub-call-python
+#https://medium.com/google-cloud/setup-and-invoke-cloud-functions-using-python-e801a8633096
+#https://codelabs.developers.google.com/codelabs/cloud-functions-python-http#6
+#https://stackoverflow.com/questions/61573102/calling-a-google-cloud-function-from-within-python
+
+https://www.google.com/search?q=invoke+cloud+function+python+request+json&rlz=1C1FKPE_thTH1017TH1017&oq=invoke+cloud+function+python+request+json&aqs=chrome..69i57j33i160l3.14013j1j7&sourceid=chrome&ie=UTF-8

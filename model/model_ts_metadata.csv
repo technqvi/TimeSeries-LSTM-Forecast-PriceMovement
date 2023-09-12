@@ -1,0 +1,4 @@
+﻿model_id,asset,prediction,input_sequence_length,output_sequence_length,gs_model_path,local_model_path,model_file,scaler_file,scaler_pred_file
+spy-ema1-60t10-ds0115t0523,SPY,EMA1,60,10,gs://demo-ts-forecast-pongthorn/model_spy_ema1,model/model_spy_ema1,EMA1_60To10_SPY_E150S20-Y2015-2023_ma.h5,scaler_EMA1_60To10_SPY_E150S20-Y2015-2023.gz,scaler_pred_EMA1_60To10_SPY_E150S20-Y2015-2023.gz
+spy-signal-60t10-ds0115t0523,SPY,SIGNAL,60,10,gs://demo-ts-forecast-pongthorn/model_spy_signal,model/model_spy_signal,SIGNAL_60To10_SPY_E150S20-Y2015-2023_ma.h5,scaler_SIGNAL_60To10_SPY_E150S20-Y2015-2023.gz,scaler_pred_SIGNAL_60To10_SPY_E150S20-Y2015-2023.gz
+qqq-ema1-30t5-ds0115t0523,QQQ,EMA1,30,5,gs://demo-ts-forecast-pongthorn/model_qqq_ema1,model/model_qqq_ema1,EMA1_30To5_QQQ_E200S20-Y2015-2023_ma.h5,scaler_EMA1_30To5_QQQ_E200S20-Y2015-2023.gz,scaler_pred_EMA1_30To5_QQQ_E200S20-Y2015-2023.gz
