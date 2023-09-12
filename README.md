@@ -3,7 +3,7 @@
 - We provide you with the End to End Solution from ingesting data into BigQuery to visualizing prediction result on Dashboard tool.
 
 ## Steps performed include the following task and process flow figure shown  below.
-![process](https://github.com/technqvi/TimeSeriesML-FinMarket/assets/38780060/ff6cb6e1-ea11-4677-84e0-0949f1d33cf0)
+![process](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/assets/38780060/55e5556a-f59a-45d2-8ffe-e6c560962aa0)
 
 1. Load stock price data from Finance.yahoo.com to Bigquery.
 2. Create technical analysis indicator such as EMA,MACD,SINGLA using [TA library](https://technical-analysis-library-in-python.readthedocs.io/en/latest/) as features and import data into the price data table.
@@ -14,22 +14,23 @@
 5. Visualize prediction result using line chart compared to the actual result through Jupyter Lab and PowerBI.
 6. Collect model performance data such as Predicted Value and  Actual Value  and bring them  to calculate Mean Absolute Error(MAE) to monitor model performance over time.
 7. Visualize error between predicted Value and  actual Value and show MAE value  over time.
+<img width="802" alt="report" src="https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/assets/38780060/184c06a0-5a8b-4c4c-8e49-e19cf210d8c7">
 
 
 <img width="697" alt="image" src="https://github.com/technqvi/TimeSeriesML-FinMarket/assets/38780060/9694e19a-9e98-4d3a-a6fb-26e773cb8f5b">
 
 ## [Youtube : Building LSTM Time-Series Models  to Predict Future Stock Price Movement](https://www.youtube.com/playlist?list=PLIxgtZc_tZWPCX4dAFJFhDPPGxEungxc8)
 
-## [Forecast Asset Future Price Movement By LSTM-TimeSeries Source Code](https://github.com/technqvi/TimeSeriesML-FinMarket/tree/main/forecast-asset%20-price-movement-LSTM-TimeSeries)
-### [load_daily_price_from_yahoo.ipynb](https://github.com/technqvi/TimeSeriesML-FinMarket/blob/main/forecast-asset%20-price-movement-LSTM-TimeSeries/load_daily_price_from_yahoo.ipynb)
+## [Forecast Asset Future Price Movement By LSTM-TimeSeries Source Code]
+### [load_daily_price_from_yahoo.ipynb](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/blob/main/load_daily_price_from_yahoo.ipynb)
 ##### Youtube : [1 Load Stock Price From Yahoo To BigQuery For Building LSTM Model](https://www.youtube.com/watch?v=jaPpyopNFPA&feature=youtu.be)
 * There are 2 options to load price data to GoogleBiquery.
 * Option#1 Export data price from Amibroker as csv file and load it to bigquery.
 * Option#2 Pull data price from [finance.yahoo.com](https://finance.yahoo.com/) by using [yfinance](https://github.com/ranaroussi/yfinance) as dataframe and load it to bigquery .
 * To build any technical analysis indicator as features to get prepred for building Time-Series Machine Learning, we can appy [Technical Analysis Library in Python](https://technical-analysis-library-in-python.readthedocs.io/en/latest/) to get it done .
-* This script has been deployed as clound function on google cloud run service AS [load-asset-price-yahoo](https://github.com/technqvi/TimeSeriesML-FinMarket/blob/main/forecast-asset/load_daily_price_from_yahoo.ipynb)(google cloud function) and create job on cloud scheduler to trig clound function on daily basis.
+* This script has been deployed as clound function on google cloud run service AS [load-asset-price-yahoo](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/tree/main/load-asset-price-yahoo)(google cloud function) and create job on cloud scheduler to trig clound function on daily basis.
 
-### [build_forecast_ts_lstm_model.ipynb](https://github.com/technqvi/TimeSeriesML-FinMarket/blob/main/forecast-asset%20-price-movement-LSTM-TimeSeries/build_forecast_ts_lstm_model.ipynb)
+### [build_forecast_ts_lstm_model.ipynb](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/blob/main/build_forecast_ts_lstm_model.ipynb)
 ##### Youtube :  [2#1 Build Univariate Multi Step LSTM Models To Predict Stock Price](https://www.youtube.com/watch?v=O8p2cteVTSs&feature=youtu.be) | [2#2 Build Univariate Multi Step LSTM Models To Predict Stock Price](https://youtu.be/_bVOFtHC2yQ) |  [2#3 Build Univariate Multi Step LSTM Models To Predict Stock Price](https://www.youtube.com/watch?v=8idQEuBFLfw&feature=youtu.be)
 * Load the training data from Big1uery  and save it as   csv file.
 * Explore the data to identify trends and patterns of EMA movement.
