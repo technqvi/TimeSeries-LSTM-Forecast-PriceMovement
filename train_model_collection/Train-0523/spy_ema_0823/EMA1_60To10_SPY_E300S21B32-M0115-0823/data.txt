@@ -1,0 +1,42 @@
+start_date='2015-01-01' 
+end_date='2023-08-31'
+asset_name='SPY'   
+
+# univaiate  (single feature)
+prediction_col='EMA1'
+feature_cols=['EMA1']
+
+
+input_sequence_length =60  #60 #120
+output_sequence_length =10  # 10 #20
+train_ratio=0.8
+
+n_epochs =300  #50 #100/150/200
+n_batch_size = 32  # 16/32/64
+
+n_early=21
+
+Keras Tuning Parameter Setting
+Train Row : 1674
+60(backward step) x 1(features) = 60, it is total no.NN  to predict future 10 with Hidden Node Unit from 60 to 240
+[60, 120, 180, 240] and [0.  0.1 0.2]
+all combination : 4 x 3 = 12
+MAx run : 12 each trail run to essemble  3
+
+
+Trial 12 Complete [00h 18m 05s]
+mean_absolute_error: 0.009417759565015634
+
+Best mean_absolute_error So Far: 0.008582360421617826
+
+
+{'input_unit': 120, 'Dropout_rate': 0.0}
+
+Best epoch: 128
+
+test loss, test acc: [0.02140328846871853, 0.02140328846871853]
+
+
+Mean Absolute Error (MAE): 6.01
+===========================================================================
+Mean Absolute Percentage Error (MAPE): 1.48 %
