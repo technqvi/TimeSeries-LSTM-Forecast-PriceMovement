@@ -1,0 +1,79 @@
+# Way one layer
+def build_model_way(hp):
+    
+    model = Sequential()
+
+    model.add(LSTM( hp.Int('input_unit',min_value=neuron_number ,max_value=max_neuron,step=step_neuron) \
+                   , return_sequences=False, input_shape=(inputshape_Timestamps,no_feature)))
+
+    model.add(Dense(n_output_neurons))
+
+    model.compile(optimizer="adam", loss="mean_squared_error",metrics = ['mse'])
+    return model
+
+
+# Way1 one Layer and Dropput layer LSTM
+def build_singel_hidder_layer_model_way(hp):
+    
+    model = Sequential()
+
+    model.add(LSTM( hp.Int('input_unit',min_value=neuron_number ,max_value=max_neuron,step=step_neuron) \
+                   , return_sequences=False, input_shape=(inputshape_Timestamps,no_feature)))
+    
+    model.add(Dropout(hp.Float('Dropout_rate',min_value=min_drop,max_value=max_drop,step=step_drop))) 
+
+    model.add(Dense(n_output_neurons))
+    
+    # hp_learning_rate = hp.Float("lr", min_value=min_rl, max_value=max_rl, sampling="log")
+    hp_learning_rate = hp.Choice('learning_rate', values=learingRatelist) 
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=hp_learning_rate), loss=main_loss, metrics=[main_obj_metric])
+    
+    # model.compile(optimizer="adam", loss=main_loss, metrics=[main_obj_metric])
+    return model
+
+
+# Way2 3 Layer and 2 Dropput layer LSTM
+def build_2hidden_layer_model_way(hp):
+    
+    model = Sequential()
+
+    model.add(LSTM( hp.Int('input_unit',min_value=neuron_number ,max_value=max_neuron,step=step_neuron) \
+                   , return_sequences=True, input_shape=(inputshape_Timestamps,no_feature)))
+   
+    model.add(Dropout(hp.Float('Dropout_rate',min_value=min_drop,max_value=max_drop,step=step_drop)))
+    
+    model.add(LSTM(hp.Int('layer_2_neurons',min_value=neuron_number,max_value=max_neuron,step=step_neuron) \
+                  ,return_sequences=False ))
+        
+    model.add(Dropout(hp.Float('Dropout_rate',min_value=min_drop,max_value=max_drop,step=step_drop)))
+
+    model.add(Dense(n_output_neurons))
+
+    hp_learning_rate = hp.Choice('learning_rate', values=learingRatelist) 
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=hp_learning_rate), loss=main_loss, metrics=[main_obj_metric])
+    
+
+    return model
+
+
+
+def build_many_hidden_layer_model_way2(hp):
+    
+    model = Sequential()
+
+    model.add(LSTM( hp.Int('input_unit',min_value=neuron_number ,max_value=max_neuron,step=step_neuron) \
+                   , return_sequences=True, input_shape=(x_train.shape[1], x_train.shape[2])))
+    for i in range(hp.Int('n_layers', 1, 5)):
+        model.add(LSTM(hp.Int(f'lstm_{i}_units',min_value=neuron_number,max_value=max_neuron,step=step_neuron) \
+                  ,return_sequences=True))       
+    model.add(LSTM(hp.Int('layer_2_neurons',min_value=neuron_number,max_value=maxlast_neuron,step=step_neuron) \
+                  ,return_sequences=False ))
+        
+    model.add(Dropout(hp.Float('Dropout_rate',min_value=min_drop,max_value=max_drop,step=step_drop)))
+
+    model.add(Dense(1))
+
+    model.compile(optimizer="adam", loss="mean_squared_error",metrics = ['mse'])
+
+    return model
+
