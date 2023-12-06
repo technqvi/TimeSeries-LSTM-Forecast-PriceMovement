@@ -78,7 +78,7 @@ Create Visualization prediction result(feature+prediction) compared to actual pr
 * Create collection date on Saturday as well as start date and end date to gather model performance data every week.
 * Get model configuration metadata ( This script is capable of collecting performance for multiple models once).
 * Retrieve predicted value  and actual values  and return as dataframe from tables in BigQuery and merge both into one dataframe.
-* Bring the recently created dataframe as the first dataframe and the whole model performance data previously collected from the prior weeks  as the second dataframe to calculate MAE together and put the calculation result into the dataframe.
+* Take the recently created dataframe as the first dataframe and  the previous the whole model performance data from table as the second dataframe to calculate MAE(Mean Absolute Error)  and put the calculation result into the dataframe.
 * Convert dataframe to JSON object along with adding predicted value and actual values into this JSON object as nested and repeated columns and end up  loading this JSON object into BigQuery.
 * Cloud function as this link [collect_performance_forecast_result](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/tree/main/collect_performance_forecast_result) 
 
