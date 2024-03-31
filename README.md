@@ -1,7 +1,8 @@
 # About
 - This project involves in building time series model using Long short-term memory (LSTM) that is  kind of RNN(Recurrent Neural Network)  on Tensorflow Framework in order to make prediction of future stock price movement pattern . To make price movement  smoother  and less volatile ,the model use [EMA Indicator](https://www.investopedia.com/ask/answers/122314/what-exponential-moving-average-ema-formula-and-how-ema-calculated.asp#:~:text=The%20exponential%20moving%20average%20(EMA)%20is%20a%20technical%20chart%20indicator,importance%20to%20recent%20price%20data.)  instead price as input feature in the past 30 days to forecast future EMA values as output prediction over the next 5 days.
 - We provide you with the End to End Solution from ingesting data into BigQuery to visualizing prediction result on Dashboard tool.
-
+- This project is experimental project aims to familiarize me with the use of the Google Cloud platform in the areas of Machine Learning and Data analytics.
+- This project was inspired by [TFEX-Trend-Prediction(2020)](https://github.com/technqvi/ML-StockPrice-TrendPrediction) to shift model from XGBoost to LSTM Time-Series
 ## Steps performed include the following task and process flow figure shown  below.
 ![process](https://github.com/technqvi/TimeSeries-LSTM-Forecast-PriceMovement/assets/38780060/55e5556a-f59a-45d2-8ffe-e6c560962aa0)
 
